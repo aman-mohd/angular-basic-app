@@ -79,9 +79,37 @@ styleUrl:  './app.component.css'
 export  class  AppComponent {
 }
 ```
-*Note: Since I am on Angular v17 I don't use app.module.ts and import component direftlty in component.ts file* 
+*Note: Since I am on Angular v17 I don't use app.module.ts and import component direftlty in component.ts file, incase you are on earlier version import the component in the *moudle.ts file and add the import in the declarations array* 
 
 Now finally delete everything from your app.component.html file and add `<app-manual></app-manual>`
 Hit save and your app should render:
+
 **![](https://lh7-us.googleusercontent.com/jVKPCDPRVurX3Q-rQ3gauoSCjYo-kivNNK0e0weVg3uoMOymM3_9DmF1CNwKzby7n1I2jIveEfhCIiudCq4UyEY8akivMkJU9aea1gYTlLikDvX0cwXIjDSK5hszh8-lkeEu5FL9PoT2gYQCx5aYv4E)**
+
 Congrats!! 🎉🥳 you succesfully created your first Angular Component.
+
+Now let's replace the template in manual component with templateUrl directive. We will create a new file inside our manual component directory as `manual.component.html` and some html in it.
+
+manual.component.ts:
+```
+@Component({
+  selector: 'app-manual',
+  standalone: true,
+  templateUrl: './manual.component.html'
+})
+
+export class ManualComponent{
+
+}
+```
+manual.component.html:
+```
+<div>
+  <h1>Hi I am rendered from templateUrl..🤘</h1>
+</div>
+```
+Now after saving your app should render:
+
+**![](https://lh7-us.googleusercontent.com/LfZnGsAdV1JFcXHpYQdkzzUxEEUUOWYSVHGh3JX4dlTrY5XHS11MyMu483cJjZS78KmgvHBET6eHk-5rkrPrZoVFB2RPVX2zeXDiSqF8a6uB9q38OMwInZzi4i6Uw1GPdGLu4dRvEf0qIVil8yKI6Uw)**
+
+
