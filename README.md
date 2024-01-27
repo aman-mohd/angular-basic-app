@@ -113,3 +113,21 @@ Now after saving your app should render:
 **![](https://lh7-us.googleusercontent.com/LfZnGsAdV1JFcXHpYQdkzzUxEEUUOWYSVHGh3JX4dlTrY5XHS11MyMu483cJjZS78KmgvHBET6eHk-5rkrPrZoVFB2RPVX2zeXDiSqF8a6uB9q38OMwInZzi4i6Uw1GPdGLu4dRvEf0qIVil8yKI6Uw)**
 
 
+## Adding CSS
+Adding CSS to your components is pretty straightforward, create a xyz.component.css file in your component directory and import it in the `styleUrl` property of that componenet's decorator.
+
+```
+import { Component } from "@angular/core";
+
+@Component({
+  selector: 'app-manual',
+  standalone: true,
+  templateUrl: './manual.component.html',
+  styleUrl: './manual.component.css'
+})
+
+export class ManualComponent{
+
+}
+```
+now give your elements' class names or id and add styling of your choice.
